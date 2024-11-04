@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.correct{
+    background-color: green;
+  }
+
+.incorrect{
+    background-color: red;
+  }
