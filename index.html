@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Alab 316.2.1</title>
+</head>
+
+<body>
+    <div class="puzzle-1">
+        <div class="puzzle-img">
+            <img src="https://mindyourdecisions.com/blog/wp-content/uploads/2016/01/how-many-squares-are-in-this-picture.png"
+                alt="">
+        </div>
+        <div class="ans-prompt">
+
+            <p>Click to submit your answer</p>
+            <button onclick="promptExample()">Answer</button>
+            <p id="demo"></p>
+
+        </div>
+    </div>
+
+    <!-- =============================================================== -->
+
+    <script>
+
+        const answer = 30;
+
+        function promptExample(){
+            let number = prompt("Please enter a number", "0");
+
+            if(number > answer){
+                document.getElementById("demo").innerHTML = "Try a lower number.";
+                document.querySelector("body").classList.add("incorrect");
+            } else if (number < answer){
+                document.getElementById("demo").innerHTML = "Try a higher number.";
+                document.querySelector("body").classList.add("incorrect");
+            } else {
+                document.getElementById("demo").innerHTML = "You are correct.";
+                document.querySelector("body").classList.add("correct");
+            }
+
+        }
+
+    </script>
+    
+</body>
+
+</html>
